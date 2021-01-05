@@ -9,22 +9,14 @@ body {
     font-weight: 400;
 }
 
-.header {
-    -webkit-box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
-    box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
-}
-
 .header__top {
-    @include flex-row;
-    flex-direction: row-reverse;
+    @extend %flex-row;
     background: $header-color;
     height: 20px;
     padding: 30px 10px;
-    // border: 1px red solid;
     &__right,
     &__button {
-        @include flex-row;
+        @extend %flex-row;
     }
     .logo {
         width: 14em;
@@ -35,8 +27,7 @@ body {
         }
     }
     .search {
-        @include flex-row;
-        flex-direction: row;
+        @extend %flex-row;
         background-color: #f0f0f1;
         padding: 5px;
         border-radius: 10px;
@@ -60,8 +51,7 @@ body {
         }
     }
     .panel {
-        @include flex-row;
-        justify-self: flex-start;
+        @extend %flex-row;
         border: 1px solid #e0e0e2;
         border-radius: 10px;
         padding: 0.1em 1em;
