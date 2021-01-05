@@ -1,0 +1,132 @@
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/eot/iranyekanwebbold.eot");
+  src: url("../fonts/eot/iranyekanwebbold.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebbold.woff") format("woff"), url("../fonts/woff2/iranyekanwebbold.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebbold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/eot/iranyekanwebthin.eot");
+  src: url("../fonts/eot/iranyekanwebthin.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebthin.woff") format("woff"), url("../fonts/woff2/iranyekanwebthin.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebthin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/eot/iranyekanweblight.eot");
+  src: url("../fonts/eot/iranyekanweblight.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanweblight.woff") format("woff"), url("../fonts/woff2/iranyekanweblight.woff2") format("woff2"), url("../fonts/ttf/iranyekanweblight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/eot/iranyekanwebregular.eot");
+  src: url("../fonts/eot/iranyekanwebregular.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebregular.woff") format("woff"), url("../fonts/woff2/iranyekanwebregular.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebregular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/eot/iranyekanwebmedium.eot");
+  src: url("../fonts/eot/iranyekanwebmedium.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebmedium.woff") format("woff"), url("../fonts/woff2/iranyekanwebmedium.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebmedium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/eot/iranyekanwebextrabold.eot");
+  src: url("../fonts/eot/iranyekanwebextrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebextrabold.woff") format("woff"), url("../fonts/woff2/iranyekanwebextrabold.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebextrabold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 850;
+  src: url("../fonts/eot/iranyekanwebblack.eot");
+  src: url("../fonts/eot/iranyekanwebblack.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebblack.woff") format("woff"), url("../fonts/woff2/iranyekanwebblack.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebblack.ttf") format("truetype"); }
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/eot/iranyekanwebextrablack.eot");
+  src: url("../fonts/eot/iranyekanwebextrablack.eot?#iefix") format("embedded-opentype"), url("../fonts/woff/iranyekanwebextrablack.woff") format("woff"), url("../fonts/woff2/iranyekanwebextrablack.woff2") format("woff2"), url("../fonts/ttf/iranyekanwebextrablack.ttf") format("truetype"); }
+
+body {
+  background: #f5f5f5;
+  color: #616161;
+  font-size: 12px;
+  font-family: 'iranyekan', Arial, Helvetica, sans-serif;
+  font-weight: 400; }
+
+.header {
+  -webkit-box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21); }
+
+.header__top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: white;
+  height: 20px;
+  padding: 30px 10px; }
+  .header__top__right, .header__top__button {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center; }
+  .header__top .logo {
+    width: 14em;
+    height: 5em; }
+    .header__top .logo img {
+      width: 100%;
+      height: 100%; }
+  .header__top .search {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f0f0f1;
+    padding: 5px;
+    border-radius: 10px;
+    flex-grow: 1; }
+    .header__top .search__icon {
+      background: f0f0f1;
+      padding: 0.7em; }
+    .header__top .search__input {
+      background: none;
+      color: none;
+      border: none;
+      height: 2.7em;
+      width: 50em;
+      direction: rtl;
+      font-family: 'iranyekan', Arial, Helvetica, sans-serif !important;
+      color: #474747; }
+      .header__top .search__input:focus {
+        outline: none; }
+  .header__top .panel {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: flex-start;
+    border: 1px solid #e0e0e2;
+    border-radius: 10px;
+    padding: 0.1em 1em; }
+    .header__top .panel__icon {
+      padding-left: 10px;
+      font-size: 20px; }
+  .header__top .shop {
+    font-size: 22px;
+    margin: 0px 30px 0px 10px; }
+
+.header__button {
+  background: white;
+  height: 30px;
+  padding: 12px; }
