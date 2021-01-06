@@ -1,7 +1,14 @@
 %flex-row {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -9,4 +16,15 @@
     -webkit-box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
     -moz-box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
     box-shadow: 1px 6px 6px 0px rgba(0, 0, 0, 0.21);
+}
+
+%img-banner {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
