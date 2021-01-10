@@ -77,6 +77,11 @@ ul {
     border-radius: 5px;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
 [class^="col-"] {
     float: right;
 }

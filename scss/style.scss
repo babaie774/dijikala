@@ -12,13 +12,14 @@ body {
 
 .header {
     margin-bottom: 30px;
+    @extend %header_shadow;
     .header-top {
         @extend %flex-row;
         background: $header-color;
         height: 20px;
         padding: 30px 10px;
         &__right,
-        &__button {
+        &__left {
             @extend %flex-row;
         }
         .logo {
@@ -124,8 +125,8 @@ body {
 
 .sug {
     @extend %flex-row;
+    margin: 20px 0px;
     justify-content: center;
-    // padding: 0px 30px;
     background: #ef394e;
     height: 35rem;
     &__info {
@@ -152,27 +153,63 @@ body {
         @extend %flex-row;
         .product-item {
             @extend %flex-column;
-            justify-content: space-between;
-            width: 25em;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 17em;
             height: 38em;
             border-radius: 20px;
-            margin: 0px 5px;
+            padding: 0px 25px;
             background-color: white;
             &__img {
                 width: 15em;
                 height: 15em;
-                margin: 25px 0px;
+                margin: 20px 0px;
             }
             &__price {
-                @extend %flex-column;
-                justify-content: flex-end;
-                background: black;
+                align-self: flex-end;
+                font-size: 15px;
+                font-weight: 500;
                 &__1 {
                     @extend %flex-row;
-                    align-items: flex-end;
-                    width: 100%;
+                    &__left {
+                        padding: 1px 8px;
+                        color: white;
+                        background: red;
+                        border-radius: 20px;
+                    }
                 }
+                &__2 {
+                    font-weight: 800;
+                    font-size: 17px;
+                    color: black;
+                }
+            }
+            &__time {
+                align-self: flex-end;
+                margin-top: 10px;
+                font-size: 14px;
             }
         }
     }
+}
+
+.banner-2 {
+    width: 110em;
+    height: 230px;
+    margin: auto;
+    @extend %flex-row;
+    justify-content: space-around;
+    &__item {
+        width: 25%;
+        height: 100%;
+        border-radius: 20px;
+        margin: 0px 5px;
+        &__img {
+            border-radius: 20px;
+        }
+    }
+}
+
+.sup {
+    background: #6bb927;
 }

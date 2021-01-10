@@ -1,10 +1,10 @@
-.header .header-top, .header .header-top__right, .header .header-top__button, .header .header-top .search, .header .header-top .panel, .header .header-button, .header .header-button__menu, .sug, .sug__info, .sug__product, .sug__product .product-item__price__1 {
+.header .header-top, .header .header-top__right, .header .header-top__left, .header .header-top .search, .header .header-top .panel, .header .header-button, .header .header-button__menu, .sug, .sug__info, .sug__product, .sug__product .product-item__price__1, .banner-2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
 
-.sug__product .product-item, .sug__product .product-item__price {
+.sug__product .product-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,10 +19,6 @@
   width: 100%;
   height: 100%;
   border-radius: 20px; }
-
-img {
-  width: 100%;
-  height: 100%; }
 
 @font-face {
   font-family: iranyekan;
@@ -165,6 +161,7 @@ body {
     grid-row: 2/3; }
 
 .sug {
+  margin: 20px 0px;
   justify-content: center;
   background: #ef394e;
   height: 35rem; }
@@ -186,19 +183,47 @@ body {
     height: 40em;
     margin: 0px 20px; }
     .sug__product .product-item {
-      justify-content: space-between;
-      width: 25em;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 17em;
       height: 38em;
       border-radius: 20px;
-      margin: 0px 5px;
+      padding: 0px 25px;
       background-color: white; }
       .sug__product .product-item__img {
         width: 15em;
         height: 15em;
-        margin: 25px 0px; }
+        margin: 20px 0px; }
       .sug__product .product-item__price {
-        justify-content: flex-end;
-        background: black; }
-        .sug__product .product-item__price__1 {
-          align-items: flex-end;
-          width: 100%; }
+        align-self: flex-end;
+        font-size: 15px;
+        font-weight: 500; }
+        .sug__product .product-item__price__1__left {
+          padding: 1px 8px;
+          color: white;
+          background: red;
+          border-radius: 20px; }
+        .sug__product .product-item__price__2 {
+          font-weight: 800;
+          font-size: 17px;
+          color: black; }
+      .sug__product .product-item__time {
+        align-self: flex-end;
+        margin-top: 10px;
+        font-size: 14px; }
+
+.banner-2 {
+  width: 110em;
+  height: 220px;
+  margin: auto;
+  justify-content: space-around; }
+  .banner-2__item {
+    width: 25%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 0px 5px; }
+    .banner-2__item__img {
+      border-radius: 20px; }
+
+.sup {
+  background: #6bb927; }
