@@ -1,215 +1,130 @@
-@import "./variables";
-@import "./utilities";
-@import "./fonts";
-body {
-    background: $base-color;
-    color: $text-color;
-    font-size: 12px;
-    font-family: 'iranyekan', Arial, Helvetica, sans-serif;
-    font-weight: 400;
+/* imports */
+
+@import './inc/_font.scss';
+
+/* imports */
+
+
+/* constant styles */
+
+%flex {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    border: 1px red solid;
+}
+
+
+/* constant style */
+
+
+/* reset css */
+
+* {
+    font-family: 'iranyekan', Times, serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    direction: ltr;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+html {
     direction: rtl;
 }
 
-.header {
-    margin-bottom: 30px;
-    @extend %header_shadow;
-    .header-top {
-        @extend %flex-row;
-        background: $header-color;
-        height: 20px;
-        padding: 30px 10px;
-        &__right,
-        &__left {
-            @extend %flex-row;
-        }
-        .logo {
-            width: 14em;
-            height: 5em;
-        }
-        .search {
-            @extend %flex-row;
-            background-color: #f0f0f1;
-            padding: 5px;
-            border-radius: 10px;
-            flex-grow: 1;
-            &__icon {
-                background: f0f0f1;
-                padding: 0.7em;
-            }
-            &__input {
-                background: none;
-                color: none;
-                border: none;
-                height: 2.7em;
-                width: 50em;
-                direction: rtl;
-                font-family: 'iranyekan', Arial, Helvetica, sans-serif !important;
-                color: #474747;
-                &:focus {
-                    outline: none;
-                }
-            }
-        }
-        .panel {
-            @extend %flex-row;
-            border: 1px solid #e0e0e2;
-            border-radius: 10px;
-            padding: 0.1em 1em;
-            &__icon {
-                padding-left: 10px;
-                font-size: 20px;
-            }
-        }
-        .shop {
-            font-size: 22px;
-            margin: 0px 10px 0px 10px;
-            border-right: 1px black solid;
-            padding-right: 20px;
+a {
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+a:hover,
+a.active {
+    text-decoration: none;
+    color: black;
+    padding: 10PX 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+li,
+ol,
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row:after {
+    clear: both;
+    content: " ";
+    display: table
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.img-responsive {
+    width: 100px;
+    height: auto;
+}
+
+.round-corner {
+    border-radius: 5px;
+}
+
+[class^="col-"] {
+    float: right;
+}
+
+
+/* reset css */
+
+
+/* header start */
+
+.header_top {
+    @extend %flex;
+    // height: 40px;
+    padding: 20px 10px;
+}
+
+.header_buttom {
+    @extend %flex;
+    justify-content: flex-start;
+    padding: 20px 10px;
+    &--menu {
+        @extend %flex;
+        &--item {
+            padding: 0px 5px;
         }
     }
-    .header-button {
-        background: $header-color;
-        height: 30px;
-        padding: 12px;
-        @extend %flex-row;
-        &__menu {
-            @extend %flex-row;
-            margin-left: 15px;
-            &__item {
-                margin-left: 15px;
-            }
-            &__cat {
-                padding-left: 10px;
-                margin: 0px 10px;
-                border-left: 1px black solid;
-            }
-        }
+    &--city {
+        marign: 0px auto 0px 10px;
+        // align-self: end;
     }
 }
 
-.banner {
-    width: 80rem;
-    height: 28rem;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 15px;
-    row-gap: 15px;
-    .slider {
-        width: 65em;
-        border-radius: 20px;
-        grid-column: 1/2;
-        grid-row: 1/3;
-        &__img {
-            @extend %img-banner;
-        }
-    }
-    &__1 {
-        width: 35em;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        .banner-img {
-            @extend %img-banner;
-        }
-    }
-    &__2 {
-        width: 35em;
-        grid-column: 2/3;
-        grid-row: 2/3;
-        .banner-img {
-            @extend %img-banner;
-        }
-    }
-}
 
-.sug {
-    @extend %flex-row;
-    margin: 20px 0px;
-    justify-content: center;
-    background: #ef394e;
-    height: 35rem;
-    &__info {
-        @extend %flex-row;
-        flex-direction: column;
-        &__img {
-            width: 200px;
-            height: 300px;
-        }
-        &__btn {
-            background: none;
-            border: 1px white solid;
-            height: 45px;
-            width: 130px;
-            line-height: 45px;
-            text-align: center;
-            pointer-events: none;
-        }
-    }
-    &__product {
-        width: 90em;
-        height: 40em;
-        margin: 0px 20px;
-        @extend %flex-row;
-        .product-item {
-            @extend %flex-column;
-            justify-content: space-around;
-            align-items: flex-start;
-            width: 17em;
-            height: 38em;
-            border-radius: 20px;
-            padding: 0px 25px;
-            background-color: white;
-            &__img {
-                width: 15em;
-                height: 15em;
-                margin: 20px 0px;
-            }
-            &__price {
-                align-self: flex-end;
-                font-size: 15px;
-                font-weight: 500;
-                &__1 {
-                    @extend %flex-row;
-                    &__left {
-                        padding: 1px 8px;
-                        color: white;
-                        background: red;
-                        border-radius: 20px;
-                    }
-                }
-                &__2 {
-                    font-weight: 800;
-                    font-size: 17px;
-                    color: black;
-                }
-            }
-            &__time {
-                align-self: flex-end;
-                margin-top: 10px;
-                font-size: 14px;
-            }
-        }
-    }
-}
-
-.banner-2 {
-    width: 110em;
-    height: 230px;
-    margin: auto;
-    @extend %flex-row;
-    justify-content: space-around;
-    &__item {
-        width: 25%;
-        height: 100%;
-        border-radius: 20px;
-        margin: 0px 5px;
-        &__img {
-            border-radius: 20px;
-        }
-    }
-}
-
-.sup {
-    background: #6bb927;
-}
+/* header start */
