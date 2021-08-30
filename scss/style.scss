@@ -1,24 +1,21 @@
-/* imports */
-
 @import './inc/_font.scss';
-
-/* imports */
-
-
-/* constant styles */
-
+@import './inc/variable';
 %flex {
     display: flex;
     justify-content: space-around;
     flex-direction: row-reverse;
-    border: 1px red solid;
+    align-items: center;
 }
 
+%input-color {
+    background-color: $Secondary-color;
+    color: $Primary-color-text;
+    border: none;
+}
 
-/* constant style */
-
-
-/* reset css */
+%border {
+    border: 1px red solid;
+}
 
 * {
     font-family: 'iranyekan', Times, serif;
@@ -27,7 +24,7 @@
     box-sizing: border-box;
     direction: ltr;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 html {
@@ -35,13 +32,13 @@ html {
 }
 
 a {
-    color: white;
+    color: $Primary-color;
     border-radius: 10px;
     text-decoration: none;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: $Secondary-color;
 }
 
 a:hover,
@@ -49,7 +46,7 @@ a.active {
     text-decoration: none;
     color: black;
     padding: 10PX 20px;
-    background-color: white;
+    background-color: $Primary-color;
     border-radius: 10px;
 }
 
@@ -98,33 +95,91 @@ ul {
     float: right;
 }
 
-
-/* reset css */
-
-
-/* header start */
-
-.header_top {
+.header {
+    @extend %border;
     @extend %flex;
-    // height: 40px;
-    padding: 20px 10px;
-}
-
-.header_buttom {
-    @extend %flex;
-    justify-content: flex-start;
-    padding: 20px 10px;
-    &--menu {
+    flex-direction: column;
+    background-color: $Primary-color;
+    &_top {
         @extend %flex;
-        &--item {
-            padding: 0px 5px;
+        justify-content: flex-start;
+        height: 70px;
+        width: 95%;
+        &--logo {
+            margin: 0px 0px 0px 30px;
+        }
+        .search {
+            margin: 0px 0px 0px auto;
+            @extend %flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background-color: $Secondary-color;
+            padding: 10px 10px;
+            width: 40%;
+            border-radius: 10px;
+            &_input {
+                @extend %input-color;
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                text-align: right;
+            }
+            &_button {
+                @extend %input-color;
+                padding: 5px;
+                background-color: transparent;
+                &--icon {
+                    color: $Secondary-color-text;
+                }
+            }
+            &:hover {
+                background-color: $Primary-color;
+                box-shadow: 2px 2px 0px #616161;
+                z-index: 2;
+                height: 50px;
+            }
+        }
+        &--admin {
+            color: $Primary-color-text;
+            background-color: $Primary-color;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px $Primary-color-text solid;
+            &--icon {
+                // border: 1px red solid;
+                margin: 0px 10px;
+            }
+        }
+        &--basket {
+            margin: 0px 10px;
+            padding: 10px;
         }
     }
-    &--city {
-        marign: 0px auto 0px 10px;
-        // align-self: end;
+    &_bottom {
+        @extend %flex;
+        justify-content: flex-start;
+        width: 95%;
+        height: 70px;
+        &--menu {
+            @extend %flex;
+            margin: 0px 10px;
+            &--item {
+                padding: 0px 10px;
+            }
+        }
+        &--city {
+            margin: 0px auto 0px 10px;
+        }
     }
 }
 
-
-/* header start */
+.main {
+    @extend %flex;
+    height: 550px;
+    &_banner {
+        height: 90%;
+        width: 80%;
+        margin: auto;
+        border: 1px red solid;
+    }
+}
